@@ -111,7 +111,7 @@ async function run() {
       res.send(result);
     });
     // GET ALL PRODUCTS FOR PRODUCT PAGE
-    app.get("/products", verifyToken, async (req, res) => {
+    app.get("/products", async (req, res) => {
       const { search, brand, category, sorting } = req.query;
       const query = {};
       // return console.log({ search, brand, category, sorting });
